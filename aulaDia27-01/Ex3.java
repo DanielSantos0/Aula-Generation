@@ -2,27 +2,30 @@ package AulasDeJava;
 
 import java.util.Scanner;
 
-//Faça um programa que receba três inteiros e diga qual deles é o maior.
-public class Ex3 {
+public class Ex1 {
 	public static void main(String args[]) {
-		int num1,num2,num3;
+		int idade;
 		
 		Scanner ler = new Scanner(System.in);
 		
-		System.out.println("Entre com 3 numeros inteiros: ");
-		num1 = ler.nextInt();
-		num2 = ler.nextInt();
-		num3 = ler.nextInt();
+		System.out.println("Entre aqui com a idade do participante: ");
+		idade = ler.nextInt();
 		
-		if(num1>num2 && num1>num3) {
-			System.out.println("O maior número é: "+num1);
-		}	
-		else if (num2>num1 && num2>num3) {
-			System.out.println("O maior número é: "+num2);
-		}	
-		else {
-			System.out.println("O maior número é: "+num3);
+		if(idade>=10 && idade<=14) {
+			System.out.println("A categoria do participante é infantil");	
 		}
-	}
+		else if(idade>=15 && idade<=17) {
+			System.out.println("A categoria do participante é juvenil");
+		}
+		else if(idade>=18 && idade<=25) {
+			System.out.println("A categoria do participante é adulto");
+		}
+		else {
+			System.out.println("Idade do participante inválida...");
+		}
+		
+		
+	
+	}	
 
 }
