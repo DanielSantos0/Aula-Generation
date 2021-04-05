@@ -1,6 +1,14 @@
 package org.generation.blogPessoal.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class UsuarioLogin {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	
 	private String nome;
 	
@@ -9,6 +17,35 @@ public class UsuarioLogin {
 	private String senha;
 	
 	private String token;
+	
+	private String foto;
+	
+	private String tipo;
+	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 
 	public String getNome() {
 		return nome;
